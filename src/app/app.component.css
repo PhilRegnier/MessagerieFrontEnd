@@ -1,0 +1,48 @@
+.parent {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  grid-template-rows: 0.5fr 1.7fr 1fr;
+  gap: 0.1em;
+  grid-template-areas:
+    "titre titre"
+    "personnes-actives messages"
+    "personnes-actives nouveau-message";
+}
+
+@media (max-width: 500px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "titre"
+      "personnes-actives"
+      "messages"
+      "nouveau-message";
+  }
+}
+
+.cadre {
+  border: 2px solid grey;
+  margin: 1px;
+  padding: 3px 10px;
+}
+
+app-titre {
+  grid-area: titre;
+}
+
+app-personnes-actives {
+  grid-area: personnes-actives;
+}
+
+app-messages {
+  grid-area: messages;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+app-nouveau-message {
+  grid-area: nouveau-message;
+}
+
+

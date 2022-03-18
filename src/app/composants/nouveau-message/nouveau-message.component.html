@@ -1,0 +1,23 @@
+<h3>nouveau message :</h3>
+
+<form #formulaire="ngForm" (ngSubmit)="submitForm(formulaire.value)">
+
+  <div class="field">
+    <label class="label">De :</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Votre pseudo" name="pseudo" [value]="formulaire.value.pseudo" ngModel>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Message :</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="Votre message" rows="2" name="message" [value]="formulaire.value.message" ngModel></textarea>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button class="button is-success">Valider</button>
+  </div>
+
+</form>

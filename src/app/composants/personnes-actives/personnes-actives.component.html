@@ -1,0 +1,5 @@
+<h3>personnes actives :</h3>
+<div *ngIf="lesPersonnes.length === 0">Aucune personne active</div>
+<ul>
+  <li *ngFor="let p of lesPersonnes"><a href="#">{{p}}</a></li>
+</ul>
